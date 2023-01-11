@@ -23,7 +23,7 @@ Dealership.prototype.manufacturerForEachCar = function() {
 }
 
 // Modified to search by property (manufacturer, price or engine)
-Dealership.prototype.findCarByManufacturer = function(property, desiredValue) {
+Dealership.prototype.findCarByProperty = function(property, desiredValue) {
     const propertyCars = this.stock.filter((car) => {
         return car[property] === desiredValue;
     });

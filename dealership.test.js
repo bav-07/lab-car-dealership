@@ -46,19 +46,24 @@ describe('testing dealership stock methods', () => {
     test('can search stock by manufactuer', () => {
         bavCars.addCarToStock(M3);
         const expected = [ E26 , M3 ];
-        const actual = bavCars.findCarByManufacturer("manufacturer","BMW");
+        const actual = bavCars.findCarByProperty("manufacturer","BMW");
         expect(actual).toStrictEqual(expected);
     })
     test('can search stock by price', () => {
         bavCars.addCarToStock(DB9);
         const expected = [ Countach, Porsche911, DB9 ];
-        const actual = bavCars.findCarByManufacturer("price", 250000);
+        const actual = bavCars.findCarByProperty("price", 250000);
         expect(actual).toStrictEqual(expected);
     })
     test('can search stock by engine', () => {
         bavCars.addCarToStock(GTO);
         const expected = [ F40 , GTO ];
-        const actual = bavCars.findCarByManufacturer("engine","Dino V8");
+        const actual = bavCars.findCarByProperty("engine","Dino V8");
+        expect(actual).toStrictEqual(expected);
+    })
+    test('can search stock by model', () => {
+        const expected = [ AE86 ];
+        const actual = bavCars.findCarByProperty("model", "Trueno");
         expect(actual).toStrictEqual(expected);
     })
     test('can find total stock value', () => {
