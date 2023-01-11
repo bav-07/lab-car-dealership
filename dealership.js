@@ -11,7 +11,11 @@ Dealership.prototype.countCars = function() {
 }
 
 Dealership.prototype.addCarToStock = function(car) {
-    this.stock.push(car);
+    if (this.stock.length < this.maxCapacity) {
+        this.stock.push(car);
+        return;
+    }
+    return "Dealership full";
 }
 
 Dealership.prototype.manufacturerForEachCar = function() {

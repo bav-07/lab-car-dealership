@@ -16,7 +16,7 @@ beforeEach(() => {
     DB9 = new Car("Aston Martin", "DB9", 200000, "5.9L V12");
     M3 = new Car("BMW", "M3", 20000, "2.5L V6");
     stock = [AE86, R32, FD, Countach, Porsche911, F40, E26];
-    bavCars = new Dealership("Bav's Cars", 9, stock);
+    bavCars = new Dealership("Bav's Cars", 8, stock);
 })
 
 describe('testing dealership stock methods', () => {
@@ -29,6 +29,12 @@ describe('testing dealership stock methods', () => {
         bavCars.addCarToStock(DB9);
         const expected = 8;
         const actual = bavCars.countCars();
+        expect(actual).toBe(expected);
+    })
+    test('fails to add car when stock is at max capacity', () => {
+        bavCars.addCarToStock(M3);
+        const expected = "Dealership full";
+        const actual = bavCars.addCarToStock(DB9);
         expect(actual).toBe(expected);
     })
     test('can obtain array of car manufacturers', () => {
