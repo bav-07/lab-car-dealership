@@ -42,4 +42,9 @@ describe('testing dealership stock methods', () => {
         const actual = bavCars.findCarByManufacturer("BMW");
         expect(actual).toStrictEqual(expected);
     })
+    test('can find total stock value', () => {
+        const expected = 4035000;
+        const actual = bavCars.totalStockValue();
+        expect(actual).toBe(expected);
+    })
 })
