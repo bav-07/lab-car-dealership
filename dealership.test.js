@@ -1,7 +1,7 @@
 const {Car} = require('./car');
 const {Dealership} = require('./dealership');
 
-let AE86, R32, FD, Countach, Porsche911, F40, E26, DB9;
+let AE86, R32, FD, Countach, Porsche911, F40, E26, DB9, M3;
 let bavCars;
 let stock;
 
@@ -14,6 +14,7 @@ beforeEach(() => {
     F40 = new Car("Ferrari", "F40", 2500000, "2.9L V8");
     E26 = new Car("BMW", "M1", 800000, "3.5L M88/1 I6");
     DB9 = new Car("Aston Martin", "DB9", 200000, "5.9L V12");
+    M3 = new Car("BMW", "M3", 20000, "2.5L V6");
     stock = [AE86, R32, FD, Countach, Porsche911, F40, E26];
     bavCars = new Dealership("Bav's Cars", 9, stock);
 })
@@ -25,10 +26,15 @@ describe('testing dealership stock methods', () => {
         expect(actual).toBe(expected);
     })
     test('can add car to stock', () => {
-        bavCars.addCarToStock(DB9)
+        bavCars.addCarToStock(DB9);
         const expected = 8;
         const actual = bavCars.countCars();
         expect(actual).toBe(expected);
     })
-    
+    test('can search stock by manufactuer', () => {
+        bavCars.addCarToStock(M3);
+        const expected = [ E26 , M3 ];
+        const actual = bavCars.findCarByManufacturer("BMW");
+        expect(actual).toStrictEqual(expected);
+    })
 })
