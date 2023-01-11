@@ -1,6 +1,6 @@
 const {Car} = require('./car');
 
-let car;
+let AE86, R32, FD, Countach, Porsche911, F40, E26;
 
 beforeEach(() => {
     AE86 = new Car("Toyota", "Trueno", 110000, "4A-GE");

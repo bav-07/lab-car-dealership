@@ -5,3 +5,9 @@ const Dealership = function(name, maxCapacity, stock) {
     this.maxCapacity = maxCapacity;
     this.stock = stock;
 };
+
+Dealership.prototype.countCars = function() {
+    return this.stock.length;
+}
+
+module.exports = {Dealership};
