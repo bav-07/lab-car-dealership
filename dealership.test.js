@@ -31,6 +31,11 @@ describe('testing dealership stock methods', () => {
         const actual = bavCars.countCars();
         expect(actual).toBe(expected);
     })
+    test('can obtain array of car manufacturers', () => {
+        const expected = ["Toyota", "Nissan", "Mazda", "Lamborghini", "Porsche", "Ferrari", "BMW"];
+        const actual = bavCars.manufacturerForEachCar();
+        expect(actual).toStrictEqual(expected);
+    })
     test('can search stock by manufactuer', () => {
         bavCars.addCarToStock(M3);
         const expected = [ E26 , M3 ];

@@ -14,6 +14,10 @@ Dealership.prototype.addCarToStock = function(car) {
     this.stock.push(car);
 }
 
+Dealership.prototype.manufacturerForEachCar = function() {
+    return this.stock.map((car) => car.manufacturer);
+}
+
 Dealership.prototype.findCarByManufacturer = function(searchedManufactuer) {
     const manufacturerCars = this.stock.filter((car) => {
         return car.manufacturer === searchedManufactuer;
