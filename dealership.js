@@ -22,11 +22,12 @@ Dealership.prototype.manufacturerForEachCar = function() {
     return this.stock.map((car) => car.manufacturer);
 }
 
-Dealership.prototype.findCarByManufacturer = function(searchedManufactuer) {
-    const manufacturerCars = this.stock.filter((car) => {
-        return car.manufacturer === searchedManufactuer;
+// Modified to search by property (manufacturer, price or engine)
+Dealership.prototype.findCarByManufacturer = function(property, desiredValue) {
+    const propertyCars = this.stock.filter((car) => {
+        return car[property] === desiredValue;
     });
-    return manufacturerCars;
+    return propertyCars;
 }
 
 Dealership.prototype.totalStockValue = function() {
