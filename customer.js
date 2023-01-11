@@ -8,11 +8,17 @@ const Customer = function(name, wallet) {
 }
 
 Customer.prototype.buyCar = function(dealership, desiredModel) {
-    desiredCar = dealership.findCarByProperty("model", desiredModel);
-    if (desiredCar != [] && this.wallet > desiredCar.price){
+    const desiredCar = dealership.findCarByProperty("model", desiredModel);
+    if (desiredCar.length !== 0){
+        if (this.wallet < desiredCar[0]["price"]){
+            return "Too expensive";
+        }
         this.car = desiredCar;
-        dealership.stock.splice(dealership.stock.indexOf(desiredCar), 1);
+        this.wallet = this.wallet - desiredCar[0]["price"];
+        dealership.sellCar(desiredModel);
+        return this.car;
     }
+    return "Model not available"
 }
 
 module.exports = {Customer};

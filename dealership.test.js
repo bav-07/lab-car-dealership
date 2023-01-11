@@ -71,4 +71,9 @@ describe('testing dealership stock methods', () => {
         const actual = bavCars.totalStockValue();
         expect(actual).toBe(expected);
     })
+    test('can sell car', () => {
+        const expected = [AE86, R32, Countach, Porsche911, F40, E26];
+        const actual = bavCars.sellCar("RX-7");
+        expect(actual).toStrictEqual(expected);
+    })
 })

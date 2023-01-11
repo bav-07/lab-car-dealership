@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1673478243797" clover="3.2.0">
+  <project timestamp="1673478243797" name="All files">
+    <metrics statements="50" coveredstatements="50" conditionals="6" coveredconditionals="6" methods="14" coveredmethods="14" elements="70" coveredelements="70" complexity="0" loc="50" ncloc="50" packages="1" files="3" classes="3"/>
+    <file name="car.js" path="/Users/bav/Documents/coursework/week_07/day_03/car_lab/car.js">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="1" count="3" type="stmt"/>
+      <line num="2" count="178" type="stmt"/>
+      <line num="3" count="178" type="stmt"/>
+      <line num="4" count="178" type="stmt"/>
+      <line num="5" count="178" type="stmt"/>
+      <line num="8" count="3" type="stmt"/>
+    </file>
+    <file name="customer.js" path="/Users/bav/Documents/coursework/week_07/day_03/car_lab/customer.js">
+      <metrics statements="17" coveredstatements="17" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+      <line num="1" count="2" type="stmt"/>
+      <line num="2" count="2" type="stmt"/>
+      <line num="4" count="2" type="stmt"/>
+      <line num="5" count="5" type="stmt"/>
+      <line num="6" count="5" type="stmt"/>
+      <line num="7" count="5" type="stmt"/>
+      <line num="10" count="2" type="stmt"/>
+      <line num="11" count="5" type="stmt"/>
+      <line num="12" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="13" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="16" count="3" type="stmt"/>
+      <line num="17" count="3" type="stmt"/>
+      <line num="18" count="3" type="stmt"/>
+      <line num="19" count="3" type="stmt"/>
+      <line num="21" count="1" type="stmt"/>
+      <line num="24" count="2" type="stmt"/>
+    </file>
+    <file name="dealership.js" path="/Users/bav/Documents/coursework/week_07/day_03/car_lab/dealership.js">
+      <metrics statements="27" coveredstatements="27" conditionals="2" coveredconditionals="2" methods="11" coveredmethods="11"/>
+      <line num="1" count="2" type="stmt"/>
+      <line num="2" count="2" type="stmt"/>
+      <line num="4" count="2" type="stmt"/>
+      <line num="5" count="15" type="stmt"/>
+      <line num="6" count="15" type="stmt"/>
+      <line num="7" count="15" type="stmt"/>
+      <line num="10" count="2" type="stmt"/>
+      <line num="11" count="2" type="stmt"/>
+      <line num="14" count="2" type="stmt"/>
+      <line num="15" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="16" count="5" type="stmt"/>
+      <line num="17" count="5" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="22" count="2" type="stmt"/>
+      <line num="23" count="7" type="stmt"/>
+      <line num="27" count="2" type="stmt"/>
+      <line num="28" count="9" type="stmt"/>
+      <line num="29" count="66" type="stmt"/>
+      <line num="31" count="9" type="stmt"/>
+      <line num="34" count="2" type="stmt"/>
+      <line num="35" count="7" type="stmt"/>
+      <line num="38" count="2" type="stmt"/>
+      <line num="39" count="4" type="stmt"/>
+      <line num="40" count="28" type="stmt"/>
+      <line num="42" count="4" type="stmt"/>
+      <line num="43" count="4" type="stmt"/>
+      <line num="46" count="2" type="stmt"/>
+    </file>
+  </project>
+</coverage>

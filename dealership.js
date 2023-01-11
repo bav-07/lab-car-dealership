@@ -1,4 +1,5 @@
 const Car = require('./car');
+const Customer = require('./customer');
 
 const Dealership = function(name, maxCapacity, stock) {
     this.name = name;
@@ -32,6 +33,14 @@ Dealership.prototype.findCarByProperty = function(property, desiredValue) {
 
 Dealership.prototype.totalStockValue = function() {
     return this.stock.reduce((accumulator, car) => accumulator + car.price, 0);
+}
+
+Dealership.prototype.sellCar = function(desiredModel) {
+    const newStock = this.stock.filter((car) => {
+        return car.model != desiredModel;
+    });
+    this.stock = newStock;
+    return this.stock;
 }
 
 module.exports = {Dealership};
